@@ -27,9 +27,7 @@ export class UserService {
 
   async findByLogin(login: string): Promise<UserDto | null> {
     const userDocument = await this.userRepository.findByLogin(login);
-    return userDocument
-      ? Mapper.plainToDto(UserDto, userDocument.toObject())
-      : null;
+    return userDocument ? Mapper.plainToDto(UserDto, userDocument) : null;
   }
 
   async getById(id: string): Promise<UserDto> {
