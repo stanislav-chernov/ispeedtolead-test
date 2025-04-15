@@ -129,7 +129,7 @@ export class AuthController {
   })
   @ApiResponse({
     status: 401,
-    description: 'Invalid login or password provided.',
+    description: 'Provided toke is invalid provided.',
     schema: {
       example: {
         message: 'Unauthorized',
