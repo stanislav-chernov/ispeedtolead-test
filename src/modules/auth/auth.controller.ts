@@ -38,7 +38,7 @@ export class AuthController {
     description: 'A user with the given login already exists.',
     schema: {
       example: {
-        message: 'User already with login johndoe exists',
+        message: 'User with login johndoe already exists',
         error: 'Conflict',
         statusCode: 409,
       },
@@ -61,7 +61,7 @@ export class AuthController {
     const existUser = await this.userService.findByLogin(registerDto.login);
     if (existUser) {
       throw new ConflictException(
-        `User already with login ${existUser.login} exists`,
+        `User with login ${existUser.login} already exists`,
       );
     }
     const userDto = await this.userService.createUser(registerDto);
