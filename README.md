@@ -75,8 +75,8 @@ This collection includes **scripts that run after requests** for **login** and *
 received in the response. These scripts automatically save the token to a **Postman collection variable**, which is then
 used for subsequent requests.
 
-This setup eliminates the need for manually copying the token to the `Authorization` header. Simply **register** or *
-*login**, and the token will be saved and used automatically in future requests to protected routes.
+This setup eliminates the need for manually copying the token to the `Authorization` header. Simply **register** or
+**login**, and the token will be saved and used automatically in future requests to protected routes.
 
 ---
 
